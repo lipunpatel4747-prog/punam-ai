@@ -43,7 +43,7 @@ async function ask(text){
         'x-goog-api-key':key.value.trim()
       },
       body:JSON.stringify({
-        systemInstruction:{parts:[{text:'Tumhara naam Punam hai. Tum ek dost ki tarah Hinglish mein chhote, natural jawab deti ho.'}]},
+        systemInstruction:{parts:[{text:'Tumhara naam Punam hai. Tum ek dost ki tarah Hinglish mein chhote, natural jawab deti ho. Abhi ka samay aur tareekh: '+new Date().toLocaleString('en-IN',{dateStyle:'full',timeStyle:'short'})+'.'}]},
         contents:history
       })
     });
