@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Punam AI</title>
+<title>KSA</title><link rel="manifest" href="manifest.json">
 <style>
 body{background:#111;color:#fff;font-family:sans-serif;text-align:center;padding:20px}
 button{font-size:22px;padding:16px 32px;border:0;border-radius:40px;background:#6c5ce7;color:#fff;margin:10px}
@@ -15,7 +15,7 @@ input{width:90%;padding:10px;font-size:16px}
 <div id="log"></div>
 <script>
 window.onerror=function(m,s,l){document.getElementById('log').innerHTML+='<p>JS Error: '+m+' (line '+l+')</p>';};
-const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js');const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
 const key=document.getElementById('key'),btn=document.getElementById('btn'),
 st=document.getElementById('status'),log=document.getElementById('log');
 let on=false,busy=false,history=[],rec;try{key.value=localStorage.getItem('pkey')||key.value;i}catch(e){}
